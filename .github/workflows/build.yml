@@ -1,0 +1,74 @@
+name: build
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"     # каждые 6 часов
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["sources/**", "scripts/**", ".github/workflows/build.yml"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: Сборка списков
+        run: python scripts/build.py
+
+      - name: Компиляция sing-box .srs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release download -R SagerNet/sing-box -p '*-linux-amd64.tar.gz' -O /tmp/sb.tgz
+          mkdir -p /tmp/sb && tar -xzf /tmp/sb.tgz -C /tmp/sb --strip-components=1
+          for f in dist/sing-box/*.json; do
+            /tmp/sb/sing-box rule-set compile --output "${f%.json}.srs" "$f"
+          done
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version: stable
+          cache: false
+
+      - name: Сборка geosite.dat для Xray
+        continue-on-error: true
+        run: |
+          git clone --depth 1 https://github.com/v2fly/domain-list-community /tmp/dlc
+          mkdir -p "$GITHUB_WORKSPACE/dist/xray"
+          cd /tmp/dlc
+          go run ./ --datapath="$GITHUB_WORKSPACE/dist/v2fly-data" \
+                    --outputname=geosite-ru-restricted.dat \
+                    --outputdir="$GITHUB_WORKSPACE/dist/xray"
+
+      - name: Публикация в ветку release
+        run: |
+          mkdir /tmp/out && cd /tmp/out
+          git init -q -b release
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          if git fetch -q --depth 1 origin release; then
+            git checkout -q -B release FETCH_HEAD
+            git rm -rq --ignore-unmatch .
+          fi
+          cp -r "$GITHUB_WORKSPACE/dist/." .
+          git add -A
+          if git diff --cached --quiet; then echo "Изменений нет"; exit 0; fi
+          git commit -qm "update $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push -q origin release
