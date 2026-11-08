@@ -1,0 +1,273 @@
+# Источник истины. После правки и push в main сборка запускается сама.
+#
+# Поля сервиса:
+#   id          — латиница/цифры/дефис, станет именем файлов в dist/
+#   group       — ai | video | social | messengers | dev | other | foreign → агрегаты group-<имя>
+#   restriction — rkn (блок РКН) | geoblock (блокирует сам сервис) | throttle (замедление)
+#   verified    — подтверждены ли статус и домены источниками
+#   in_all      — попадает ли сервис в общий список all (по умолчанию true)
+#   domains     — домены; каждый матчится вместе со всеми своими поддоменами
+#   regexp      — регулярки (только sing-box, Mihomo, Xray)
+#   cidr / asn  — подсети и автономные системы (префиксы ASN берутся из RIPEstat)
+#   upstreams   — itdog:<файл>, itdog-cat:<файл>, itdog-ip4:<файл>, itdog-ip6:<файл>,
+#                 v2fly:<файл>, domains-url:<url>, cidr-url:<url>
+#   exclude     — выкинуть, даже если домен принёс upstream
+#   probe       — домены для еженедельной проверки по OONI
+#   ct          — шаблоны поиска поддоменов в crt.sh
+
+settings:
+  min_total_domains: 200        # если в all меньше — сборка падает и ничего не публикуется
+  singbox_ruleset_version: 2    # 2 = sing-box 1.10+; для старых версий поставьте 1
+  mikrotik_forward_to: 1.1.1.1  # DNS для заблокированных доменов (маршрут к нему — через VPN)
+  keenetic_interface: Wireguard0
+  keenetic_chunk: 250           # доменов в одной FQDN-группе Keenetic
+
+# Эти домены целиком добавлять нельзя: суффиксный матчинг унесёт в VPN весь сервис.
+shared_roots: [google.com, googleapis.com, gstatic.com, googleusercontent.com, withgoogle.com,
+  l.google.com, microsoft.com, cloud.microsoft, bing.com, live.com, apple.com, icloud.com,
+  github.com, githubusercontent.com, cloudflare.com, cloudflare.net, amazonaws.com,
+  cloudfront.net, azureedge.net, azurefd.net, windows.net, azure.com, akamaiedge.net,
+  akamaized.net, sentry.io, datadoghq.com, b-cdn.net, imgix.net, livekit.cloud]
+
+exclude: []
+
+services:
+  # ───────────── Google ─────────────
+  - id: google-ai
+    company: Google
+    group: ai
+    restriction: geoblock
+    verified: true
+    upstreams: [itdog:google_ai]
+    domains:
+      - gemini.google.com
+      - gemini.google
+      - bard.google.com
+      - aistudio.google.com
+      - makersuite.google.com
+      - alkalimakersuite-pa.clients6.google.com
+      - generativelanguage.googleapis.com
+      - ai.google.dev
+      - generativeai.google
+      - geller-pa.googleapis.com
+      - proactivebackend-pa.googleapis.com
+      - aisandbox-pa.googleapis.com
+      - robinfrontend-pa.googleapis.com
+      - aida.googleapis.com
+      - notebooklm.google.com
+      - notebooklm.google
+      - labs.google              # Flow, Whisk, ImageFX: labs.google/fx/...
+      - opal.withgoogle.com
+      - stitch.withgoogle.com
+      - jules.google
+      - jules.google.com
+      - antigravity.google
+      - antigravity-pa.googleapis.com
+      - antigravity.googleapis.com
+      - deepmind.com
+      - deepmind.google
+      - cloudcode-pa.googleapis.com
+    probe: [gemini.google.com]
+
+  - id: youtube
+    company: Google
+    group: video
+    restriction: rkn
+    verified: true
+    upstreams: [itdog:youtube]
+    domains: [youtube.com, youtu.be, youtube-nocookie.com, youtubekids.com, googlevideo.com,
+      ytimg.com, ggpht.com, yt3.googleusercontent.com, yt4.googleusercontent.com,
+      youtubei.googleapis.com, youtube.googleapis.com, youtubeembeddedplayer.googleapis.com,
+      jnn-pa.googleapis.com, youtube-ui.l.google.com, ytimg.l.google.com, ytstatic.l.google.com,
+      yt-video-upload.l.google.com, wide-youtube.l.google.com]
+    probe: [www.youtube.com]
+
+  - id: google-meet
+    company: Google
+    group: other
+    restriction: throttle
+    verified: true
+    upstreams: [itdog:google_meet]
+    domains: [meet.google.com, meet.googleapis.com, stream.meet.google.com]
+    probe: [meet.google.com]
+
+  - id: google-play
+    company: Google
+    group: other
+    restriction: geoblock
+    verified: false
+    in_all: false
+    upstreams: [itdog:google_play]
+    domains: [play.google.com, play.googleapis.com, play-fe.googleapis.com, android.clients.google.com]
+
+  # ───────────── OpenAI ─────────────
+  - id: openai
+    company: OpenAI
+    group: ai
+    restriction: geoblock
+    verified: true
+    upstreams: [v2fly:openai]
+    domains: [chatgpt.com, chat.com, chatgpt.site, openai.com, openai.org, oaistatic.com,
+      oaiusercontent.com, oaistatsig.com, sora.com, chatgpt.livekit.cloud, host.livekit.cloud,
+      turn.livekit.cloud, browser-intake-datadoghq.com, o33249.ingest.sentry.io,
+      o33249.ingest.us.sentry.io, openai.qualtrics.com, openaiapi-site.azureedge.net,
+      openaiassets.blob.core.windows.net, production-openaicom-storage.azureedge.net,
+      openaicom.imgix.net, challenges.cloudflare.com]
+    regexp: ['^chatgpt-async-webps-prod-\S+-\d+\.webpubsub\.azure\.com$']
+    probe: [chatgpt.com]
+    ct: ["%.chatgpt.com", "%.openai.com"]
+
+  # ───────────── Anthropic ─────────────
+  - id: anthropic
+    company: Anthropic
+    group: ai
+    restriction: geoblock
+    verified: true
+    upstreams: [v2fly:anthropic]
+    domains: [claude.ai, claude.com, anthropic.com, claudeusercontent.com, claude.dev, clau.de,
+      claudemcpcontent.com, claudemcpclient.com, claude.app, claude.new, claude.site,
+      claudepages.dev, claudestudio.com, antspace.dev, modelcontextprotocol.io,
+      http-intake.logs.us5.datadoghq.com, statsig.com, statsigapi.net,
+      servd-anthropic-website.b-cdn.net, challenges.cloudflare.com]
+    cidr: [160.79.104.0/21]
+    probe: [claude.ai]
+    ct: ["%.claude.ai", "%.anthropic.com", "%.claude.com"]
+
+  # ───────────── xAI и X ─────────────
+  - id: xai
+    company: xAI
+    group: ai
+    restriction: geoblock
+    verified: false          # данные о доступности Grok из РФ противоречивы
+    upstreams: [v2fly:xai]
+    domains: [grok.com, x.ai]
+    probe: [grok.com]
+    ct: ["%.x.ai", "%.grok.com"]
+
+  - id: twitter
+    company: X Corp
+    group: social
+    restriction: rkn
+    verified: true
+    upstreams: [itdog:twitter, itdog-ip4:twitter]
+    domains: [x.com, twitter.com, t.co, twimg.com, tweetdeck.com, periscope.tv, pscp.tv]
+    probe: [x.com, twitter.com]
+
+  # ───────────── Meta ─────────────
+  - id: meta
+    company: Meta
+    group: social
+    restriction: rkn
+    verified: true
+    upstreams: [itdog:meta, itdog-ip4:meta, itdog-ip6:meta]
+    asn: [32934]
+    domains: [facebook.com, fb.com, fb.me, facebook.net, fbcdn.net, fbsbx.com, fbpigeon.com,
+      instagram.com, cdninstagram.com, ig.me, instagr.am, threads.net, threads.com,
+      messenger.com, m.me, meta.ai, meta.com, oculus.com, oculuscdn.com, workplace.com]
+    probe: [www.facebook.com, www.instagram.com]
+
+  - id: whatsapp
+    company: Meta
+    group: messengers
+    restriction: rkn
+    verified: true
+    asn: [32934]             # звонки и медиа идут по IP — без подсетей не заработают
+    domains: [whatsapp.com, whatsapp.net, wa.me, wl.co, whatsapp.cc, whatsapp.org,
+      whatsappbrand.com, whatsapp.info, whatsapp.tv]
+    probe: [web.whatsapp.com]
+
+  # ───────────── Telegram ─────────────
+  - id: telegram
+    company: Telegram
+    group: messengers
+    restriction: rkn
+    verified: true
+    upstreams:
+      - itdog:telegram
+      - v2fly:telegram
+      - itdog-ip4:telegram
+      - cidr-url:https://core.telegram.org/resources/cidr.txt
+    asn: [62041, 59930, 62014, 44907]   # AS211157 не подтверждена — добавьте после проверки
+    domains: [telegram.org, t.me, telegram.me, telegram.dog, tx.me, telesco.pe, tdesktop.com,
+      tg.dev, cdn-telegram.org, telegram-cdn.org, usercontent.dev, telegram.space, telegra.ph,
+      graph.org, fragment.com, comments.app, contest.com]
+    probe: [telegram.org, web.telegram.org]
+    ct: ["%.telegram.org"]
+
+  # ───────────── Microsoft ─────────────
+  - id: microsoft-copilot
+    company: Microsoft
+    group: ai
+    restriction: geoblock
+    verified: false
+    domains: [copilot.microsoft.com, copilot.cloud.microsoft, sydney.bing.com, edgeservices.bing.com]
+
+  - id: github-copilot
+    company: Microsoft
+    group: ai
+    restriction: geoblock
+    verified: false
+    in_all: false
+    domains: [githubcopilot.com, copilot-proxy.githubusercontent.com, origin-tracker.githubusercontent.com]
+
+  - id: linkedin
+    company: Microsoft
+    group: social
+    restriction: rkn
+    verified: true
+    domains: [linkedin.com, licdn.com, lnkd.in]
+    probe: [www.linkedin.com]
+
+  # ───────────── Мессенджеры и соцсети ─────────────
+  - id: discord
+    company: Discord
+    group: messengers
+    restriction: rkn
+    verified: true
+    upstreams: [itdog:discord, itdog-ip4:discord]
+    domains: [discord.com, discord.gg, discordapp.com, discordapp.net, discord.media, discord.dev, discordstatus.com]
+    probe: [discord.com]
+
+  - {id: signal, company: Signal, group: messengers, restriction: rkn, verified: true,
+     domains: [signal.org, signal.art, signal.me, whispersystems.org], probe: [signal.org]}
+  - {id: viber, company: Rakuten Viber, group: messengers, restriction: rkn, verified: true,
+     domains: [viber.com], probe: [www.viber.com]}
+  - {id: snapchat, company: Snap, group: social, restriction: rkn, verified: true,
+     domains: [snapchat.com, sc-cdn.net, snapkit.com, snap-dev.net], probe: [www.snapchat.com]}
+  - {id: roblox, company: Roblox, group: other, restriction: rkn, verified: true,
+     upstreams: [itdog:roblox], domains: [roblox.com, rbxcdn.com, rbx.com, robloxlabs.com], probe: [www.roblox.com]}
+  - {id: tiktok, company: ByteDance, group: social, restriction: geoblock, verified: false,
+     upstreams: [itdog:tiktok], domains: [tiktok.com, tiktokv.com, tiktokcdn.com, ttwstatic.com, byteoversea.com, ibytedtos.com]}
+  - {id: patreon, company: Patreon, group: other, restriction: rkn, verified: true, domains: [patreon.com, patreonusercontent.com]}
+  - {id: soundcloud, company: SoundCloud, group: other, restriction: rkn, verified: true, domains: [soundcloud.com, sndcdn.com]}
+  - {id: medium, company: Medium, group: other, restriction: rkn, verified: false, domains: [medium.com]}
+  - {id: dailymotion, company: Dailymotion, group: video, restriction: rkn, verified: true, domains: [dailymotion.com, dmcdn.net]}
+  - {id: metacritic, company: Fandom, group: other, restriction: rkn, verified: true, domains: [metacritic.com]}
+  - {id: envato, company: Envato, group: other, restriction: rkn, verified: true, domains: [envato.com, envatousercontent.com]}
+  # FaceTime не включён: работает по IP Apple (17.0.0.0/8), выборочно его не смаршрутизировать.
+
+  # ───────────── Прочие ИИ-сервисы (статус не сверен построчно) ─────────────
+  - {id: perplexity, company: Perplexity, group: ai, restriction: geoblock, verified: false, domains: [perplexity.ai, pplx.ai]}
+  - {id: midjourney, company: Midjourney, group: ai, restriction: geoblock, verified: false, domains: [midjourney.com]}
+  - {id: runway, company: Runway, group: ai, restriction: geoblock, verified: false, domains: [runwayml.com]}
+  - {id: elevenlabs, company: ElevenLabs, group: ai, restriction: geoblock, verified: false, domains: [elevenlabs.io]}
+  - {id: suno, company: Suno, group: ai, restriction: geoblock, verified: false, domains: [suno.com, suno.ai]}
+  - {id: udio, company: Udio, group: ai, restriction: geoblock, verified: false, domains: [udio.com]}
+  - {id: character-ai, company: Character.AI, group: ai, restriction: geoblock, verified: false, domains: [character.ai]}
+  - {id: poe, company: Quora, group: ai, restriction: geoblock, verified: false, domains: [poe.com]}
+  - {id: cursor, company: Anysphere, group: ai, restriction: geoblock, verified: false, domains: [cursor.com, cursor.sh, cursorvm.com]}
+  - {id: windsurf, company: Windsurf, group: ai, restriction: geoblock, verified: false, domains: [windsurf.com, codeium.com]}
+  - {id: replit, company: Replit, group: ai, restriction: geoblock, verified: false, domains: [replit.com]}
+  - {id: vercel-v0, company: Vercel, group: ai, restriction: geoblock, verified: false, domains: [v0.dev, v0.app]}
+
+  # ───────────── Разработка ─────────────
+  - {id: docker, company: Docker, group: dev, restriction: geoblock, verified: false, domains: [docker.io, docker.com]}
+
+  # ───────────── Ушли из РФ (не в all — подключайте group-foreign отдельно) ─────────────
+  - {id: notion, company: Notion, group: foreign, restriction: geoblock, verified: false, in_all: false, domains: [notion.so, notion.com, notion-static.com]}
+  - {id: canva, company: Canva, group: foreign, restriction: geoblock, verified: false, in_all: false, domains: [canva.com]}
+  - {id: figma, company: Figma, group: foreign, restriction: geoblock, verified: false, in_all: false, domains: [figma.com]}
+  - {id: slack, company: Salesforce, group: foreign, restriction: geoblock, verified: false, in_all: false, domains: [slack.com]}
+  - {id: onepassword, company: 1Password, group: foreign, restriction: geoblock, verified: false, in_all: false, domains: [1password.com]}
+  - {id: spotify, company: Spotify, group: foreign, restriction: geoblock, verified: false, in_all: false, domains: [spotify.com, scdn.co, spotifycdn.com]}
+  - {id: netflix, company: Netflix, group: foreign, restriction: geoblock, verified: false, in_all: false, domains: [netflix.com, nflxvideo.net, nflximg.net]}
