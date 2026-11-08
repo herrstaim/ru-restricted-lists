@@ -19,7 +19,7 @@ settings:
   min_total_domains: 200        # если в all меньше — сборка падает и ничего не публикуется
   singbox_ruleset_version: 2    # 2 = sing-box 1.10+; для старых версий поставьте 1
   mikrotik_forward_to: 1.1.1.1  # DNS для заблокированных доменов (маршрут к нему — через VPN)
-  keenetic_interface: Wireguard0
+  keenetic_interface: Wireguard1
   keenetic_chunk: 250           # доменов в одной FQDN-группе Keenetic
 
 # Эти домены целиком добавлять нельзя: суффиксный матчинг унесёт в VPN весь сервис.
