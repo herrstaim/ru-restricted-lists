@@ -2,5 +2,5 @@ object-group fqdn rr_soundcloud_1
 include sndcdn.com
 include soundcloud.com
 exit
-dns-proxy route object-group rr_soundcloud_1 Wireguard0 auto
+dns-proxy route object-group rr_soundcloud_1 Wireguard1 auto
 system configuration save

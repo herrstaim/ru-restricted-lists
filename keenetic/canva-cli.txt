@@ -1,5 +1,5 @@
 object-group fqdn rr_canva_1
 include canva.com
 exit
-dns-proxy route object-group rr_canva_1 Wireguard0 auto
+dns-proxy route object-group rr_canva_1 Wireguard1 auto
 system configuration save

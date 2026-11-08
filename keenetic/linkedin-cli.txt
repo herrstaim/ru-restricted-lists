@@ -3,5 +3,5 @@ include licdn.com
 include linkedin.com
 include lnkd.in
 exit
-dns-proxy route object-group rr_linkedin_1 Wireguard0 auto
+dns-proxy route object-group rr_linkedin_1 Wireguard1 auto
 system configuration save

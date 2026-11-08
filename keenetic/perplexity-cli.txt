@@ -2,5 +2,5 @@ object-group fqdn rr_perplexity_1
 include perplexity.ai
 include pplx.ai
 exit
-dns-proxy route object-group rr_perplexity_1 Wireguard0 auto
+dns-proxy route object-group rr_perplexity_1 Wireguard1 auto
 system configuration save

@@ -25,5 +25,5 @@ include production-openaicom-storage.azureedge.net
 include sora.com
 include turn.livekit.cloud
 exit
-dns-proxy route object-group rr_openai_1 Wireguard0 auto
+dns-proxy route object-group rr_openai_1 Wireguard1 auto
 system configuration save

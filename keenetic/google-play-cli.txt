@@ -12,5 +12,5 @@ include play.google.com
 include play.googleapis.com
 include prod-lt-playstoregatewayadapter-pa.googleapis.com
 exit
-dns-proxy route object-group rr_google_play_1 Wireguard0 auto
+dns-proxy route object-group rr_google_play_1 Wireguard1 auto
 system configuration save

@@ -1,5 +1,5 @@
 object-group fqdn rr_udio_1
 include udio.com
 exit
-dns-proxy route object-group rr_udio_1 Wireguard0 auto
+dns-proxy route object-group rr_udio_1 Wireguard1 auto
 system configuration save

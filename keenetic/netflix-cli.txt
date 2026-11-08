@@ -3,5 +3,5 @@ include netflix.com
 include nflximg.net
 include nflxvideo.net
 exit
-dns-proxy route object-group rr_netflix_1 Wireguard0 auto
+dns-proxy route object-group rr_netflix_1 Wireguard1 auto
 system configuration save

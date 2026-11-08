@@ -25,6 +25,6 @@ include servd-anthropic-website.b-cdn.net
 include statsig.com
 include statsigapi.net
 exit
-dns-proxy route object-group rr_anthropic_1 Wireguard0 auto
-ip route 160.79.104.0 255.255.248.0 Wireguard0 auto
+dns-proxy route object-group rr_anthropic_1 Wireguard1 auto
+ip route 160.79.104.0 255.255.248.0 Wireguard1 auto
 system configuration save

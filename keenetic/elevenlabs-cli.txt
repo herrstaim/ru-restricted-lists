@@ -1,5 +1,5 @@
 object-group fqdn rr_elevenlabs_1
 include elevenlabs.io
 exit
-dns-proxy route object-group rr_elevenlabs_1 Wireguard0 auto
+dns-proxy route object-group rr_elevenlabs_1 Wireguard1 auto
 system configuration save

@@ -31,5 +31,5 @@ include robloxlabs.com
 include sndcdn.com
 include soundcloud.com
 exit
-dns-proxy route object-group rr_group_other_1 Wireguard0 auto
+dns-proxy route object-group rr_group_other_1 Wireguard1 auto
 system configuration save

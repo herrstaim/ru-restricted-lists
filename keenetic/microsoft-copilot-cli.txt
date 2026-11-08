@@ -4,5 +4,5 @@ include copilot.microsoft.com
 include edgeservices.bing.com
 include sydney.bing.com
 exit
-dns-proxy route object-group rr_microsoft_copilot_1 Wireguard0 auto
+dns-proxy route object-group rr_microsoft_copilot_1 Wireguard1 auto
 system configuration save

@@ -6,5 +6,5 @@ include roblox.com
 include robloxdev.com
 include robloxlabs.com
 exit
-dns-proxy route object-group rr_roblox_1 Wireguard0 auto
+dns-proxy route object-group rr_roblox_1 Wireguard1 auto
 system configuration save

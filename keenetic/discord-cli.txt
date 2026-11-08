@@ -21,13 +21,13 @@ include discordpartygames.com
 include discordsays.com
 include discordstatus.com
 exit
-dns-proxy route object-group rr_discord_1 Wireguard0 auto
-ip route 5.200.14.128 255.255.255.128 Wireguard0 auto
-ip route 34.0.0.0 255.252.0.0 Wireguard0 auto
-ip route 35.192.0.0 255.224.0.0 Wireguard0 auto
-ip route 66.22.192.0 255.255.192.0 Wireguard0 auto
-ip route 104.16.0.0 255.240.0.0 Wireguard0 auto
-ip route 138.128.136.0 255.255.248.0 Wireguard0 auto
-ip route 162.158.0.0 255.254.0.0 Wireguard0 auto
-ip route 172.64.0.0 255.248.0.0 Wireguard0 auto
+dns-proxy route object-group rr_discord_1 Wireguard1 auto
+ip route 5.200.14.128 255.255.255.128 Wireguard1 auto
+ip route 34.0.0.0 255.252.0.0 Wireguard1 auto
+ip route 35.192.0.0 255.224.0.0 Wireguard1 auto
+ip route 66.22.192.0 255.255.192.0 Wireguard1 auto
+ip route 104.16.0.0 255.240.0.0 Wireguard1 auto
+ip route 138.128.136.0 255.255.248.0 Wireguard1 auto
+ip route 162.158.0.0 255.254.0.0 Wireguard1 auto
+ip route 172.64.0.0 255.248.0.0 Wireguard1 auto
 system configuration save

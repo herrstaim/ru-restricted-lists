@@ -5,5 +5,5 @@ include meet.googleapis.com
 include meetings.clients6.google.com
 include meetings.googleapis.com
 exit
-dns-proxy route object-group rr_google_meet_1 Wireguard0 auto
+dns-proxy route object-group rr_google_meet_1 Wireguard1 auto
 system configuration save

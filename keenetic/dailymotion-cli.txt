@@ -2,5 +2,5 @@ object-group fqdn rr_dailymotion_1
 include dailymotion.com
 include dmcdn.net
 exit
-dns-proxy route object-group rr_dailymotion_1 Wireguard0 auto
+dns-proxy route object-group rr_dailymotion_1 Wireguard1 auto
 system configuration save

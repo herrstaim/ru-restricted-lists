@@ -1,5 +1,5 @@
 object-group fqdn rr_slack_1
 include slack.com
 exit
-dns-proxy route object-group rr_slack_1 Wireguard0 auto
+dns-proxy route object-group rr_slack_1 Wireguard1 auto
 system configuration save

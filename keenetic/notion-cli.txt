@@ -3,5 +3,5 @@ include notion-static.com
 include notion.com
 include notion.so
 exit
-dns-proxy route object-group rr_notion_1 Wireguard0 auto
+dns-proxy route object-group rr_notion_1 Wireguard1 auto
 system configuration save

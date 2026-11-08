@@ -3,5 +3,5 @@ include scdn.co
 include spotify.com
 include spotifycdn.com
 exit
-dns-proxy route object-group rr_spotify_1 Wireguard0 auto
+dns-proxy route object-group rr_spotify_1 Wireguard1 auto
 system configuration save

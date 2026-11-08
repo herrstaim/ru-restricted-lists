@@ -30,5 +30,5 @@ include robinfrontend-pa.googleapis.com
 include speechs3proto2-pa.googleapis.com
 include stitch.withgoogle.com
 exit
-dns-proxy route object-group rr_google_ai_1 Wireguard0 auto
+dns-proxy route object-group rr_google_ai_1 Wireguard1 auto
 system configuration save
