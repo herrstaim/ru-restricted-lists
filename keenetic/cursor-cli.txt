@@ -1,0 +1,7 @@
+object-group fqdn rr_cursor_1
+include cursor.com
+include cursor.sh
+include cursorvm.com
+exit
+dns-proxy route object-group rr_cursor_1 Wireguard0 auto
+system configuration save

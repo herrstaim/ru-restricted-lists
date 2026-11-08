@@ -1,0 +1,5 @@
+object-group fqdn rr_metacritic_1
+include metacritic.com
+exit
+dns-proxy route object-group rr_metacritic_1 Wireguard0 auto
+system configuration save

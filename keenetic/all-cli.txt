@@ -1,0 +1,389 @@
+object-group fqdn rr_all_1
+include ads-twitter.com
+include ai.google.dev
+include aida.googleapis.com
+include aisandbox-pa.googleapis.com
+include aistudio.google.com
+include ant.dev
+include anthropic.com
+include anthropic.team
+include antigravity-pa.googleapis.com
+include antigravity-unleash.goog
+include antigravity.google
+include antigravity.googleapis.com
+include antspace.dev
+include bard.google.com
+include browser-intake-datadoghq.com
+include byteoversea.com
+include cdn-telegram.org
+include cdninstagram.com
+include challenges.cloudflare.com
+include character.ai
+include chat.com
+include chatbotclaude.com
+include chatgpt.com
+include chatgpt.livekit.cloud
+include chatgpt.site
+include circlecrewpinkcrowd.com
+include clau.de
+include claude.ai
+include claude.app
+include claude.com
+include claude.dev
+include claude.new
+include claude.site
+include claudeacademy.com
+include claudemcpclient.com
+include claudemcpcontent.com
+include claudepages.dev
+include claudestudio.com
+include claudeusercontent.com
+include clients6.google.com
+include cloudcode-pa.googleapis.com
+include cms-twdigitalassets.com
+include codeium.com
+include comments.app
+include contest.com
+include copilot.cloud.microsoft
+include copilot.microsoft.com
+include crixet.com
+include cursor.com
+include cursor.sh
+include cursorvm.com
+include dailymotion.com
+include deepmind.com
+include deepmind.google
+include dis.gd
+include discord-activities.com
+include discord-attachments-uploads-prd.storage.googleapis.com
+include discord.co
+include discord.com
+include discord.design
+include discord.dev
+include discord.gg
+include discord.gift
+include discord.gifts
+include discord.media
+include discord.new
+include discord.store
+include discord.tools
+include discordactivities.com
+include discordapp.com
+include discordapp.net
+include discordmerch.com
+include discordpartygames.com
+include discordsays.com
+include discordstatus.com
+include dmcdn.net
+include docker.com
+include docker.io
+include edgeservices.bing.com
+include elevenlabs.io
+include envato.com
+include envatousercontent.com
+include facebook.com
+include facebook.net
+include fb.com
+include fb.me
+include fbcdn.net
+include fbpigeon.com
+include fbsbx.com
+include firebaseinstallations.googleapis.com
+include fragment.com
+include geller-pa.googleapis.com
+include gemini.google
+include gemini.google.com
+include generativeai.google
+include generativelanguage.googleapis.com
+include ggpht.com
+include googlevideo.com
+include graph.org
+include grok.com
+include grokbot.com
+include grokipedia.com
+include hangouts.googleapis.com
+include host.livekit.cloud
+include http-intake.logs.us5.datadoghq.com
+include ibytedtos.com
+include ig.me
+include instagr.am
+include instagram.com
+include internalfb.com
+include jnn-pa.googleapis.com
+include jules.google
+include jules.google.com
+include labs.google
+include licdn.com
+include linkedin.com
+include lnkd.in
+include m.me
+include makersuite.google.com
+include medium.com
+include meet.google.com
+include meet.googleapis.com
+include meetings.googleapis.com
+include messenger.com
+include meta.ai
+include meta.com
+include metacritic.com
+include midjourney.com
+include modelcontextprotocol.io
+include muscdn.com
+include musical.ly
+include notebooklm.google
+include notebooklm.google.com
+include o1158394.ingest.us.sentry.io
+include o33249.ingest.sentry.io
+include o33249.ingest.us.sentry.io
+include oaistatic.com
+include oaistatsig.com
+include oaiusercontent.com
+include oculus.com
+include oculuscdn.com
+include opal.withgoogle.com
+include openai.com
+include openai.com.cdn.cloudflare.net
+include openai.org
+include openai.qualtrics.com
+include openaiapi-site.azureedge.net
+include openaiassets.blob.core.windows.net
+include openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
+include openaicom.imgix.net
+include openaicomproductionae4b.blob.core.windows.net
+include patreon.com
+include patreonusercontent.com
+include periscope.tv
+include perplexity.ai
+include poe.com
+include pplx.ai
+include proactivebackend-pa.googleapis.com
+include production-openaicom-storage.azureedge.net
+include pscp.tv
+include quiz.directory
+include rbx.com
+include rbxcdn.com
+include rbxinfra.net
+include replit.com
+include returnyoutubedislikeapi.com
+include robinfrontend-pa.googleapis.com
+include roblox.com
+include robloxdev.com
+include robloxlabs.com
+include runwayml.com
+include sc-cdn.net
+include servd-anthropic-website.b-cdn.net
+include signal.art
+include signal.me
+include signal.org
+include snap-dev.net
+include snapchat.com
+include snapkit.com
+include sndcdn.com
+include sora.com
+include soundcloud.com
+include speechs3proto2-pa.googleapis.com
+include statsig.com
+include statsigapi.net
+include stitch.withgoogle.com
+include suno.ai
+include suno.com
+include sydney.bing.com
+include t.co
+include t.me
+include tdesktop.com
+include telega.one
+include telegra.ph
+include telegram-cdn.org
+include telegram.dog
+include telegram.me
+include telegram.org
+include telegram.space
+include telesco.pe
+include tellapart.com
+include tg.dev
+include threads.com
+include threads.net
+include tik-tokapi.com
+include tiktok.com
+include tiktokcdn-eu.com
+include tiktokcdn-us.com
+include tiktokcdn.com
+include tiktokd.net
+include tiktokd.org
+include tiktokv.com
+include tiktokv.eu
+include tiktokv.us
+include tiktokw.us
+include ton.org
+include toncenter.com
+include ttwstatic.com
+include turn.livekit.cloud
+include tweetdeck.com
+include twimg.com
+include twitpic.com
+include twitter.biz
+include twitter.com
+include twitter.jp
+include twittercommunity.com
+include twitterflightschool.com
+include twitterinc.com
+include twitteroauth.com
+include twitterstat.us
+include twtrdns.net
+include twttr.com
+include twttr.net
+include twvid.com
+include tx.me
+include udio.com
+include usercontent.dev
+include v0.app
+include v0.dev
+include viber.com
+include vine.co
+include wa.me
+include whatsapp.biz
+include whatsapp.cc
+include whatsapp.com
+include whatsapp.info
+include whatsapp.net
+include whatsapp.org
+include whatsapp.tv
+include whatsappbrand.com
+exit
+dns-proxy route object-group rr_all_1 Wireguard0 auto
+object-group fqdn rr_all_2
+include whispersystems.org
+include wide-youtube.l.google.com
+include windsurf.com
+include wl.co
+include workplace.com
+include x.ai
+include x.com
+include youtu.be
+include youtube-nocookie.com
+include youtube-ui.l.google.com
+include youtube.com
+include youtube.googleapis.com
+include youtubeembeddedplayer.googleapis.com
+include youtubei.googleapis.com
+include youtubekids.com
+include yt-video-upload.l.google.com
+include yt.be
+include yt3.googleusercontent.com
+include yt4.googleusercontent.com
+include ytimg.com
+include ytimg.l.google.com
+include yting.com
+include ytstatic.l.google.com
+exit
+dns-proxy route object-group rr_all_2 Wireguard0 auto
+ip route 5.28.192.0 255.255.192.0 Wireguard0 auto
+ip route 5.200.14.128 255.255.255.128 Wireguard0 auto
+ip route 31.13.24.0 255.255.248.0 Wireguard0 auto
+ip route 31.13.64.0 255.255.192.0 Wireguard0 auto
+ip route 34.0.0.0 255.252.0.0 Wireguard0 auto
+ip route 35.192.0.0 255.224.0.0 Wireguard0 auto
+ip route 45.64.40.0 255.255.252.0 Wireguard0 auto
+ip route 57.141.0.0 255.255.255.0 Wireguard0 auto
+ip route 57.141.2.0 255.255.254.0 Wireguard0 auto
+ip route 57.141.4.0 255.255.254.0 Wireguard0 auto
+ip route 57.141.6.0 255.255.255.0 Wireguard0 auto
+ip route 57.141.8.0 255.255.255.0 Wireguard0 auto
+ip route 57.141.10.0 255.255.255.0 Wireguard0 auto
+ip route 57.141.12.0 255.255.254.0 Wireguard0 auto
+ip route 57.141.14.0 255.255.255.0 Wireguard0 auto
+ip route 57.141.16.0 255.255.252.0 Wireguard0 auto
+ip route 57.141.20.0 255.255.255.0 Wireguard0 auto
+ip route 57.141.22.0 255.255.255.0 Wireguard0 auto
+ip route 57.141.24.0 255.255.255.0 Wireguard0 auto
+ip route 57.144.0.0 255.252.0.0 Wireguard0 auto
+ip route 64.63.0.0 255.255.192.0 Wireguard0 auto
+ip route 66.22.192.0 255.255.192.0 Wireguard0 auto
+ip route 66.220.144.0 255.255.240.0 Wireguard0 auto
+ip route 69.63.176.0 255.255.240.0 Wireguard0 auto
+ip route 69.171.224.0 255.255.224.0 Wireguard0 auto
+ip route 74.119.76.0 255.255.252.0 Wireguard0 auto
+ip route 91.105.192.0 255.255.254.0 Wireguard0 auto
+ip route 91.108.4.0 255.255.252.0 Wireguard0 auto
+ip route 91.108.8.0 255.255.248.0 Wireguard0 auto
+ip route 91.108.16.0 255.255.248.0 Wireguard0 auto
+ip route 91.108.56.0 255.255.252.0 Wireguard0 auto
+ip route 95.161.64.0 255.255.240.0 Wireguard0 auto
+ip route 102.132.96.0 255.255.240.0 Wireguard0 auto
+ip route 102.132.112.0 255.255.255.0 Wireguard0 auto
+ip route 102.132.115.0 255.255.255.0 Wireguard0 auto
+ip route 102.132.116.0 255.255.254.0 Wireguard0 auto
+ip route 102.132.119.0 255.255.255.0 Wireguard0 auto
+ip route 102.132.120.0 255.255.254.0 Wireguard0 auto
+ip route 102.132.123.0 255.255.255.0 Wireguard0 auto
+ip route 102.132.125.0 255.255.255.0 Wireguard0 auto
+ip route 102.132.126.0 255.255.255.0 Wireguard0 auto
+ip route 102.221.188.0 255.255.252.0 Wireguard0 auto
+ip route 103.4.96.0 255.255.252.0 Wireguard0 auto
+ip route 103.252.112.0 255.255.252.0 Wireguard0 auto
+ip route 104.16.0.0 255.240.0.0 Wireguard0 auto
+ip route 104.244.42.0 255.255.255.0 Wireguard0 auto
+ip route 104.244.44.0 255.255.252.0 Wireguard0 auto
+ip route 129.134.0.0 255.255.128.0 Wireguard0 auto
+ip route 129.134.130.0 255.255.255.0 Wireguard0 auto
+ip route 129.134.132.0 255.255.255.0 Wireguard0 auto
+ip route 129.134.135.0 255.255.255.0 Wireguard0 auto
+ip route 129.134.136.0 255.255.252.0 Wireguard0 auto
+ip route 129.134.140.0 255.255.255.0 Wireguard0 auto
+ip route 129.134.143.0 255.255.255.0 Wireguard0 auto
+ip route 129.134.144.0 255.255.255.0 Wireguard0 auto
+ip route 129.134.148.0 255.255.254.0 Wireguard0 auto
+ip route 129.134.150.0 255.255.255.0 Wireguard0 auto
+ip route 129.134.154.0 255.255.254.0 Wireguard0 auto
+ip route 129.134.156.0 255.255.252.0 Wireguard0 auto
+ip route 129.134.160.0 255.255.252.0 Wireguard0 auto
+ip route 129.134.164.0 255.255.254.0 Wireguard0 auto
+ip route 129.134.168.0 255.255.248.0 Wireguard0 auto
+ip route 129.134.176.0 255.255.240.0 Wireguard0 auto
+ip route 129.134.194.0 255.255.254.0 Wireguard0 auto
+ip route 129.134.196.0 255.255.254.0 Wireguard0 auto
+ip route 138.128.136.0 255.255.248.0 Wireguard0 auto
+ip route 149.154.160.0 255.255.240.0 Wireguard0 auto
+ip route 157.240.0.0 255.255.128.0 Wireguard0 auto
+ip route 157.240.128.0 255.255.254.0 Wireguard0 auto
+ip route 157.240.131.0 255.255.255.0 Wireguard0 auto
+ip route 157.240.132.0 255.255.255.0 Wireguard0 auto
+ip route 157.240.134.0 255.255.255.0 Wireguard0 auto
+ip route 157.240.136.0 255.255.254.0 Wireguard0 auto
+ip route 157.240.139.0 255.255.255.0 Wireguard0 auto
+ip route 157.240.140.0 255.255.255.0 Wireguard0 auto
+ip route 157.240.143.0 255.255.255.0 Wireguard0 auto
+ip route 157.240.144.0 255.255.255.0 Wireguard0 auto
+ip route 157.240.156.0 255.255.254.0 Wireguard0 auto
+ip route 157.240.158.0 255.255.255.0 Wireguard0 auto
+ip route 157.240.169.0 255.255.255.0 Wireguard0 auto
+ip route 157.240.175.0 255.255.255.0 Wireguard0 auto
+ip route 157.240.177.0 255.255.255.0 Wireguard0 auto
+ip route 157.240.179.0 255.255.255.0 Wireguard0 auto
+ip route 157.240.181.0 255.255.255.0 Wireguard0 auto
+ip route 157.240.182.0 255.255.254.0 Wireguard0 auto
+ip route 157.240.184.0 255.255.248.0 Wireguard0 auto
+ip route 157.240.192.0 255.255.192.0 Wireguard0 auto
+ip route 160.79.104.0 255.255.248.0 Wireguard0 auto
+ip route 162.158.0.0 255.254.0.0 Wireguard0 auto
+ip route 163.70.128.0 255.255.128.0 Wireguard0 auto
+ip route 163.77.132.0 255.255.254.0 Wireguard0 auto
+ip route 163.77.136.0 255.255.254.0 Wireguard0 auto
+ip route 163.77.160.0 255.255.240.0 Wireguard0 auto
+ip route 163.114.128.0 255.255.240.0 Wireguard0 auto
+ip route 172.64.0.0 255.248.0.0 Wireguard0 auto
+ip route 173.252.64.0 255.255.192.0 Wireguard0 auto
+ip route 179.60.192.0 255.255.252.0 Wireguard0 auto
+ip route 185.60.216.0 255.255.252.0 Wireguard0 auto
+ip route 185.76.151.0 255.255.255.0 Wireguard0 auto
+ip route 185.89.216.0 255.255.252.0 Wireguard0 auto
+ip route 188.64.224.0 255.255.248.0 Wireguard0 auto
+ip route 192.133.76.0 255.255.252.0 Wireguard0 auto
+ip route 194.221.0.0 255.255.0.0 Wireguard0 auto
+ip route 199.16.156.0 255.255.252.0 Wireguard0 auto
+ip route 199.59.148.0 255.255.252.0 Wireguard0 auto
+ip route 199.96.56.0 255.255.254.0 Wireguard0 auto
+ip route 199.201.64.0 255.255.252.0 Wireguard0 auto
+ip route 202.160.128.0 255.255.252.0 Wireguard0 auto
+ip route 204.15.20.0 255.255.252.0 Wireguard0 auto
+system configuration save

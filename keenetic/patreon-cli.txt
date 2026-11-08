@@ -1,0 +1,6 @@
+object-group fqdn rr_patreon_1
+include patreon.com
+include patreonusercontent.com
+exit
+dns-proxy route object-group rr_patreon_1 Wireguard0 auto
+system configuration save

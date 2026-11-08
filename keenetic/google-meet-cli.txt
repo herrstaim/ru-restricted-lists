@@ -1,0 +1,9 @@
+object-group fqdn rr_google_meet_1
+include hangouts.googleapis.com
+include meet.google.com
+include meet.googleapis.com
+include meetings.clients6.google.com
+include meetings.googleapis.com
+exit
+dns-proxy route object-group rr_google_meet_1 Wireguard0 auto
+system configuration save

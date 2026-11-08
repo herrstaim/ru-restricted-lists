@@ -1,0 +1,8 @@
+object-group fqdn rr_signal_1
+include signal.art
+include signal.me
+include signal.org
+include whispersystems.org
+exit
+dns-proxy route object-group rr_signal_1 Wireguard0 auto
+system configuration save

@@ -1,0 +1,8 @@
+object-group fqdn rr_snapchat_1
+include sc-cdn.net
+include snap-dev.net
+include snapchat.com
+include snapkit.com
+exit
+dns-proxy route object-group rr_snapchat_1 Wireguard0 auto
+system configuration save

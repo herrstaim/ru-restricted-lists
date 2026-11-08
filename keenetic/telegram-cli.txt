@@ -1,0 +1,35 @@
+object-group fqdn rr_telegram_1
+include cdn-telegram.org
+include comments.app
+include contest.com
+include fragment.com
+include graph.org
+include quiz.directory
+include t.me
+include tdesktop.com
+include telega.one
+include telegra.ph
+include telegram-cdn.org
+include telegram.dog
+include telegram.me
+include telegram.org
+include telegram.space
+include telesco.pe
+include tg.dev
+include ton.org
+include toncenter.com
+include tx.me
+include usercontent.dev
+exit
+dns-proxy route object-group rr_telegram_1 Wireguard0 auto
+ip route 5.28.192.0 255.255.192.0 Wireguard0 auto
+ip route 91.105.192.0 255.255.254.0 Wireguard0 auto
+ip route 91.108.4.0 255.255.252.0 Wireguard0 auto
+ip route 91.108.8.0 255.255.248.0 Wireguard0 auto
+ip route 91.108.16.0 255.255.248.0 Wireguard0 auto
+ip route 91.108.56.0 255.255.252.0 Wireguard0 auto
+ip route 95.161.64.0 255.255.240.0 Wireguard0 auto
+ip route 149.154.160.0 255.255.240.0 Wireguard0 auto
+ip route 185.76.151.0 255.255.255.0 Wireguard0 auto
+ip route 194.221.0.0 255.255.0.0 Wireguard0 auto
+system configuration save

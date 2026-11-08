@@ -1,0 +1,166 @@
+object-group fqdn rr_group_social_1
+include ads-twitter.com
+include byteoversea.com
+include cdninstagram.com
+include circlecrewpinkcrowd.com
+include cms-twdigitalassets.com
+include facebook.com
+include facebook.net
+include fb.com
+include fb.me
+include fbcdn.net
+include fbpigeon.com
+include fbsbx.com
+include ibytedtos.com
+include ig.me
+include instagr.am
+include instagram.com
+include internalfb.com
+include licdn.com
+include linkedin.com
+include lnkd.in
+include m.me
+include messenger.com
+include meta.ai
+include meta.com
+include muscdn.com
+include musical.ly
+include oculus.com
+include oculuscdn.com
+include periscope.tv
+include pscp.tv
+include sc-cdn.net
+include snap-dev.net
+include snapchat.com
+include snapkit.com
+include t.co
+include tellapart.com
+include threads.com
+include threads.net
+include tik-tokapi.com
+include tiktok.com
+include tiktokcdn-eu.com
+include tiktokcdn-us.com
+include tiktokcdn.com
+include tiktokd.net
+include tiktokd.org
+include tiktokv.com
+include tiktokv.eu
+include tiktokv.us
+include tiktokw.us
+include ttwstatic.com
+include tweetdeck.com
+include twimg.com
+include twitpic.com
+include twitter.biz
+include twitter.com
+include twitter.jp
+include twittercommunity.com
+include twitterflightschool.com
+include twitterinc.com
+include twitteroauth.com
+include twitterstat.us
+include twtrdns.net
+include twttr.com
+include twttr.net
+include twvid.com
+include vine.co
+include wa.me
+include whatsapp.biz
+include whatsapp.com
+include whatsapp.net
+include workplace.com
+include x.com
+exit
+dns-proxy route object-group rr_group_social_1 Wireguard0 auto
+ip route 31.13.24.0 255.255.248.0 Wireguard0 auto
+ip route 31.13.64.0 255.255.192.0 Wireguard0 auto
+ip route 45.64.40.0 255.255.252.0 Wireguard0 auto
+ip route 57.141.0.0 255.255.255.0 Wireguard0 auto
+ip route 57.141.2.0 255.255.254.0 Wireguard0 auto
+ip route 57.141.4.0 255.255.254.0 Wireguard0 auto
+ip route 57.141.6.0 255.255.255.0 Wireguard0 auto
+ip route 57.141.8.0 255.255.255.0 Wireguard0 auto
+ip route 57.141.10.0 255.255.255.0 Wireguard0 auto
+ip route 57.141.12.0 255.255.254.0 Wireguard0 auto
+ip route 57.141.14.0 255.255.255.0 Wireguard0 auto
+ip route 57.141.16.0 255.255.252.0 Wireguard0 auto
+ip route 57.141.20.0 255.255.255.0 Wireguard0 auto
+ip route 57.141.22.0 255.255.255.0 Wireguard0 auto
+ip route 57.141.24.0 255.255.255.0 Wireguard0 auto
+ip route 57.144.0.0 255.252.0.0 Wireguard0 auto
+ip route 64.63.0.0 255.255.192.0 Wireguard0 auto
+ip route 66.220.144.0 255.255.240.0 Wireguard0 auto
+ip route 69.63.176.0 255.255.240.0 Wireguard0 auto
+ip route 69.171.224.0 255.255.224.0 Wireguard0 auto
+ip route 74.119.76.0 255.255.252.0 Wireguard0 auto
+ip route 102.132.96.0 255.255.240.0 Wireguard0 auto
+ip route 102.132.112.0 255.255.255.0 Wireguard0 auto
+ip route 102.132.115.0 255.255.255.0 Wireguard0 auto
+ip route 102.132.116.0 255.255.254.0 Wireguard0 auto
+ip route 102.132.119.0 255.255.255.0 Wireguard0 auto
+ip route 102.132.120.0 255.255.254.0 Wireguard0 auto
+ip route 102.132.123.0 255.255.255.0 Wireguard0 auto
+ip route 102.132.125.0 255.255.255.0 Wireguard0 auto
+ip route 102.132.126.0 255.255.255.0 Wireguard0 auto
+ip route 102.221.188.0 255.255.252.0 Wireguard0 auto
+ip route 103.4.96.0 255.255.252.0 Wireguard0 auto
+ip route 103.252.112.0 255.255.252.0 Wireguard0 auto
+ip route 104.244.42.0 255.255.255.0 Wireguard0 auto
+ip route 104.244.44.0 255.255.252.0 Wireguard0 auto
+ip route 129.134.0.0 255.255.128.0 Wireguard0 auto
+ip route 129.134.130.0 255.255.255.0 Wireguard0 auto
+ip route 129.134.132.0 255.255.255.0 Wireguard0 auto
+ip route 129.134.135.0 255.255.255.0 Wireguard0 auto
+ip route 129.134.136.0 255.255.252.0 Wireguard0 auto
+ip route 129.134.140.0 255.255.255.0 Wireguard0 auto
+ip route 129.134.143.0 255.255.255.0 Wireguard0 auto
+ip route 129.134.144.0 255.255.255.0 Wireguard0 auto
+ip route 129.134.148.0 255.255.254.0 Wireguard0 auto
+ip route 129.134.150.0 255.255.255.0 Wireguard0 auto
+ip route 129.134.154.0 255.255.254.0 Wireguard0 auto
+ip route 129.134.156.0 255.255.252.0 Wireguard0 auto
+ip route 129.134.160.0 255.255.252.0 Wireguard0 auto
+ip route 129.134.164.0 255.255.254.0 Wireguard0 auto
+ip route 129.134.168.0 255.255.248.0 Wireguard0 auto
+ip route 129.134.176.0 255.255.240.0 Wireguard0 auto
+ip route 129.134.194.0 255.255.254.0 Wireguard0 auto
+ip route 129.134.196.0 255.255.254.0 Wireguard0 auto
+ip route 157.240.0.0 255.255.128.0 Wireguard0 auto
+ip route 157.240.128.0 255.255.254.0 Wireguard0 auto
+ip route 157.240.131.0 255.255.255.0 Wireguard0 auto
+ip route 157.240.132.0 255.255.255.0 Wireguard0 auto
+ip route 157.240.134.0 255.255.255.0 Wireguard0 auto
+ip route 157.240.136.0 255.255.254.0 Wireguard0 auto
+ip route 157.240.139.0 255.255.255.0 Wireguard0 auto
+ip route 157.240.140.0 255.255.255.0 Wireguard0 auto
+ip route 157.240.143.0 255.255.255.0 Wireguard0 auto
+ip route 157.240.144.0 255.255.255.0 Wireguard0 auto
+ip route 157.240.156.0 255.255.254.0 Wireguard0 auto
+ip route 157.240.158.0 255.255.255.0 Wireguard0 auto
+ip route 157.240.169.0 255.255.255.0 Wireguard0 auto
+ip route 157.240.175.0 255.255.255.0 Wireguard0 auto
+ip route 157.240.177.0 255.255.255.0 Wireguard0 auto
+ip route 157.240.179.0 255.255.255.0 Wireguard0 auto
+ip route 157.240.181.0 255.255.255.0 Wireguard0 auto
+ip route 157.240.182.0 255.255.254.0 Wireguard0 auto
+ip route 157.240.184.0 255.255.248.0 Wireguard0 auto
+ip route 157.240.192.0 255.255.192.0 Wireguard0 auto
+ip route 163.70.128.0 255.255.128.0 Wireguard0 auto
+ip route 163.77.132.0 255.255.254.0 Wireguard0 auto
+ip route 163.77.136.0 255.255.254.0 Wireguard0 auto
+ip route 163.77.160.0 255.255.240.0 Wireguard0 auto
+ip route 163.114.128.0 255.255.240.0 Wireguard0 auto
+ip route 173.252.64.0 255.255.192.0 Wireguard0 auto
+ip route 179.60.192.0 255.255.252.0 Wireguard0 auto
+ip route 185.60.216.0 255.255.252.0 Wireguard0 auto
+ip route 185.89.216.0 255.255.252.0 Wireguard0 auto
+ip route 188.64.224.0 255.255.248.0 Wireguard0 auto
+ip route 192.133.76.0 255.255.252.0 Wireguard0 auto
+ip route 199.16.156.0 255.255.252.0 Wireguard0 auto
+ip route 199.59.148.0 255.255.252.0 Wireguard0 auto
+ip route 199.96.56.0 255.255.254.0 Wireguard0 auto
+ip route 199.201.64.0 255.255.252.0 Wireguard0 auto
+ip route 202.160.128.0 255.255.252.0 Wireguard0 auto
+ip route 204.15.20.0 255.255.252.0 Wireguard0 auto
+system configuration save

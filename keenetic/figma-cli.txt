@@ -1,0 +1,5 @@
+object-group fqdn rr_figma_1
+include figma.com
+exit
+dns-proxy route object-group rr_figma_1 Wireguard0 auto
+system configuration save

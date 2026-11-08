@@ -1,0 +1,15 @@
+/ip dns static remove [find comment="rr-group-foreign"]
+/ip dns static
+add name=1password.com type=FWD forward-to=1.1.1.1 match-subdomain=yes address-list=vpn_domains comment="rr-group-foreign"
+add name=canva.com type=FWD forward-to=1.1.1.1 match-subdomain=yes address-list=vpn_domains comment="rr-group-foreign"
+add name=figma.com type=FWD forward-to=1.1.1.1 match-subdomain=yes address-list=vpn_domains comment="rr-group-foreign"
+add name=netflix.com type=FWD forward-to=1.1.1.1 match-subdomain=yes address-list=vpn_domains comment="rr-group-foreign"
+add name=nflximg.net type=FWD forward-to=1.1.1.1 match-subdomain=yes address-list=vpn_domains comment="rr-group-foreign"
+add name=nflxvideo.net type=FWD forward-to=1.1.1.1 match-subdomain=yes address-list=vpn_domains comment="rr-group-foreign"
+add name=notion-static.com type=FWD forward-to=1.1.1.1 match-subdomain=yes address-list=vpn_domains comment="rr-group-foreign"
+add name=notion.com type=FWD forward-to=1.1.1.1 match-subdomain=yes address-list=vpn_domains comment="rr-group-foreign"
+add name=notion.so type=FWD forward-to=1.1.1.1 match-subdomain=yes address-list=vpn_domains comment="rr-group-foreign"
+add name=scdn.co type=FWD forward-to=1.1.1.1 match-subdomain=yes address-list=vpn_domains comment="rr-group-foreign"
+add name=slack.com type=FWD forward-to=1.1.1.1 match-subdomain=yes address-list=vpn_domains comment="rr-group-foreign"
+add name=spotify.com type=FWD forward-to=1.1.1.1 match-subdomain=yes address-list=vpn_domains comment="rr-group-foreign"
+add name=spotifycdn.com type=FWD forward-to=1.1.1.1 match-subdomain=yes address-list=vpn_domains comment="rr-group-foreign"

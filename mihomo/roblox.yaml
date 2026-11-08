@@ -1,0 +1,7 @@
+payload:
+  - "DOMAIN-SUFFIX,rbx.com"
+  - "DOMAIN-SUFFIX,rbxcdn.com"
+  - "DOMAIN-SUFFIX,rbxinfra.net"
+  - "DOMAIN-SUFFIX,roblox.com"
+  - "DOMAIN-SUFFIX,robloxdev.com"
+  - "DOMAIN-SUFFIX,robloxlabs.com"

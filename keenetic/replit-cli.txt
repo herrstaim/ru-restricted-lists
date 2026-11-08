@@ -1,0 +1,5 @@
+object-group fqdn rr_replit_1
+include replit.com
+exit
+dns-proxy route object-group rr_replit_1 Wireguard0 auto
+system configuration save

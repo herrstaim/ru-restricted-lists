@@ -1,0 +1,20 @@
+object-group fqdn rr_tiktok_1
+include byteoversea.com
+include ibytedtos.com
+include muscdn.com
+include musical.ly
+include tik-tokapi.com
+include tiktok.com
+include tiktokcdn-eu.com
+include tiktokcdn-us.com
+include tiktokcdn.com
+include tiktokd.net
+include tiktokd.org
+include tiktokv.com
+include tiktokv.eu
+include tiktokv.us
+include tiktokw.us
+include ttwstatic.com
+exit
+dns-proxy route object-group rr_tiktok_1 Wireguard0 auto
+system configuration save

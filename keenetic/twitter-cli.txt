@@ -1,0 +1,37 @@
+object-group fqdn rr_twitter_1
+include ads-twitter.com
+include cms-twdigitalassets.com
+include periscope.tv
+include pscp.tv
+include t.co
+include tellapart.com
+include tweetdeck.com
+include twimg.com
+include twitpic.com
+include twitter.biz
+include twitter.com
+include twitter.jp
+include twittercommunity.com
+include twitterflightschool.com
+include twitterinc.com
+include twitteroauth.com
+include twitterstat.us
+include twtrdns.net
+include twttr.com
+include twttr.net
+include twvid.com
+include vine.co
+include x.com
+exit
+dns-proxy route object-group rr_twitter_1 Wireguard0 auto
+ip route 64.63.0.0 255.255.192.0 Wireguard0 auto
+ip route 103.252.112.0 255.255.252.0 Wireguard0 auto
+ip route 104.244.42.0 255.255.255.0 Wireguard0 auto
+ip route 104.244.44.0 255.255.252.0 Wireguard0 auto
+ip route 188.64.224.0 255.255.248.0 Wireguard0 auto
+ip route 192.133.76.0 255.255.252.0 Wireguard0 auto
+ip route 199.16.156.0 255.255.252.0 Wireguard0 auto
+ip route 199.59.148.0 255.255.252.0 Wireguard0 auto
+ip route 199.96.56.0 255.255.254.0 Wireguard0 auto
+ip route 202.160.128.0 255.255.252.0 Wireguard0 auto
+system configuration save

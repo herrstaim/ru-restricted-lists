@@ -1,0 +1,10 @@
+object-group fqdn rr_roblox_1
+include rbx.com
+include rbxcdn.com
+include rbxinfra.net
+include roblox.com
+include robloxdev.com
+include robloxlabs.com
+exit
+dns-proxy route object-group rr_roblox_1 Wireguard0 auto
+system configuration save

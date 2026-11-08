@@ -1,0 +1,7 @@
+object-group fqdn rr_github_copilot_1
+include copilot-proxy.githubusercontent.com
+include githubcopilot.com
+include origin-tracker.githubusercontent.com
+exit
+dns-proxy route object-group rr_github_copilot_1 Wireguard0 auto
+system configuration save

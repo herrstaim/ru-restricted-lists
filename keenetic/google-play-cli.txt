@@ -1,0 +1,16 @@
+object-group fqdn rr_google_play_1
+include android.clients.google.com
+include beacons.gvt2.com
+include connectivitycheck.gstatic.com
+include googleplay.com
+include gvt1.com
+include lh3.googleusercontent.com
+include play-fe.googleapis.com
+include play-games.googleusercontent.com
+include play-lh.googleusercontent.com
+include play.google.com
+include play.googleapis.com
+include prod-lt-playstoregatewayadapter-pa.googleapis.com
+exit
+dns-proxy route object-group rr_google_play_1 Wireguard0 auto
+system configuration save

@@ -1,0 +1,25 @@
+object-group fqdn rr_youtube_1
+include ggpht.com
+include googlevideo.com
+include jnn-pa.googleapis.com
+include returnyoutubedislikeapi.com
+include wide-youtube.l.google.com
+include youtu.be
+include youtube-nocookie.com
+include youtube-ui.l.google.com
+include youtube.com
+include youtube.googleapis.com
+include youtubeembeddedplayer.googleapis.com
+include youtubei.googleapis.com
+include youtubekids.com
+include yt-video-upload.l.google.com
+include yt.be
+include yt3.googleusercontent.com
+include yt4.googleusercontent.com
+include ytimg.com
+include ytimg.l.google.com
+include yting.com
+include ytstatic.l.google.com
+exit
+dns-proxy route object-group rr_youtube_1 Wireguard0 auto
+system configuration save

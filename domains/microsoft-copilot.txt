@@ -1,0 +1,4 @@
+copilot.cloud.microsoft
+copilot.microsoft.com
+edgeservices.bing.com
+sydney.bing.com

@@ -1,0 +1,6 @@
+payload:
+  - "DOMAIN-SUFFIX,hangouts.googleapis.com"
+  - "DOMAIN-SUFFIX,meet.google.com"
+  - "DOMAIN-SUFFIX,meet.googleapis.com"
+  - "DOMAIN-SUFFIX,meetings.clients6.google.com"
+  - "DOMAIN-SUFFIX,meetings.googleapis.com"

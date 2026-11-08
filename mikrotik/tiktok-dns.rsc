@@ -1,0 +1,18 @@
+/ip dns static remove [find comment="rr-tiktok"]
+/ip dns static
+add name=byteoversea.com type=FWD forward-to=1.1.1.1 match-subdomain=yes address-list=vpn_domains comment="rr-tiktok"
+add name=ibytedtos.com type=FWD forward-to=1.1.1.1 match-subdomain=yes address-list=vpn_domains comment="rr-tiktok"
+add name=muscdn.com type=FWD forward-to=1.1.1.1 match-subdomain=yes address-list=vpn_domains comment="rr-tiktok"
+add name=musical.ly type=FWD forward-to=1.1.1.1 match-subdomain=yes address-list=vpn_domains comment="rr-tiktok"
+add name=tik-tokapi.com type=FWD forward-to=1.1.1.1 match-subdomain=yes address-list=vpn_domains comment="rr-tiktok"
+add name=tiktok.com type=FWD forward-to=1.1.1.1 match-subdomain=yes address-list=vpn_domains comment="rr-tiktok"
+add name=tiktokcdn-eu.com type=FWD forward-to=1.1.1.1 match-subdomain=yes address-list=vpn_domains comment="rr-tiktok"
+add name=tiktokcdn-us.com type=FWD forward-to=1.1.1.1 match-subdomain=yes address-list=vpn_domains comment="rr-tiktok"
+add name=tiktokcdn.com type=FWD forward-to=1.1.1.1 match-subdomain=yes address-list=vpn_domains comment="rr-tiktok"
+add name=tiktokd.net type=FWD forward-to=1.1.1.1 match-subdomain=yes address-list=vpn_domains comment="rr-tiktok"
+add name=tiktokd.org type=FWD forward-to=1.1.1.1 match-subdomain=yes address-list=vpn_domains comment="rr-tiktok"
+add name=tiktokv.com type=FWD forward-to=1.1.1.1 match-subdomain=yes address-list=vpn_domains comment="rr-tiktok"
+add name=tiktokv.eu type=FWD forward-to=1.1.1.1 match-subdomain=yes address-list=vpn_domains comment="rr-tiktok"
+add name=tiktokv.us type=FWD forward-to=1.1.1.1 match-subdomain=yes address-list=vpn_domains comment="rr-tiktok"
+add name=tiktokw.us type=FWD forward-to=1.1.1.1 match-subdomain=yes address-list=vpn_domains comment="rr-tiktok"
+add name=ttwstatic.com type=FWD forward-to=1.1.1.1 match-subdomain=yes address-list=vpn_domains comment="rr-tiktok"

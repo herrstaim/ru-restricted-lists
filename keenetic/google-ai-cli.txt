@@ -1,0 +1,34 @@
+object-group fqdn rr_google_ai_1
+include ai.google.dev
+include aida.googleapis.com
+include aisandbox-pa.googleapis.com
+include aistudio.google.com
+include antigravity-pa.googleapis.com
+include antigravity-unleash.goog
+include antigravity.google
+include antigravity.googleapis.com
+include bard.google.com
+include clients6.google.com
+include cloudcode-pa.googleapis.com
+include deepmind.com
+include deepmind.google
+include firebaseinstallations.googleapis.com
+include geller-pa.googleapis.com
+include gemini.google
+include gemini.google.com
+include generativeai.google
+include generativelanguage.googleapis.com
+include jules.google
+include jules.google.com
+include labs.google
+include makersuite.google.com
+include notebooklm.google
+include notebooklm.google.com
+include opal.withgoogle.com
+include proactivebackend-pa.googleapis.com
+include robinfrontend-pa.googleapis.com
+include speechs3proto2-pa.googleapis.com
+include stitch.withgoogle.com
+exit
+dns-proxy route object-group rr_google_ai_1 Wireguard0 auto
+system configuration save

@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "rules": [
+    {
+      "domain_suffix": [
+        "notion-static.com",
+        "notion.com",
+        "notion.so"
+      ]
+    }
+  ]
+}

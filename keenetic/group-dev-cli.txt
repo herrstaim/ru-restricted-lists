@@ -1,0 +1,6 @@
+object-group fqdn rr_group_dev_1
+include docker.com
+include docker.io
+exit
+dns-proxy route object-group rr_group_dev_1 Wireguard0 auto
+system configuration save

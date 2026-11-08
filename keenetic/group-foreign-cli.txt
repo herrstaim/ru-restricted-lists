@@ -1,0 +1,17 @@
+object-group fqdn rr_group_foreign_1
+include 1password.com
+include canva.com
+include figma.com
+include netflix.com
+include nflximg.net
+include nflxvideo.net
+include notion-static.com
+include notion.com
+include notion.so
+include scdn.co
+include slack.com
+include spotify.com
+include spotifycdn.com
+exit
+dns-proxy route object-group rr_group_foreign_1 Wireguard0 auto
+system configuration save

@@ -1,0 +1,112 @@
+object-group fqdn rr_group_messengers_1
+include cdn-telegram.org
+include comments.app
+include contest.com
+include dis.gd
+include discord-activities.com
+include discord-attachments-uploads-prd.storage.googleapis.com
+include discord.co
+include discord.com
+include discord.design
+include discord.dev
+include discord.gg
+include discord.gift
+include discord.gifts
+include discord.media
+include discord.new
+include discord.store
+include discord.tools
+include discordactivities.com
+include discordapp.com
+include discordapp.net
+include discordmerch.com
+include discordpartygames.com
+include discordsays.com
+include discordstatus.com
+include fragment.com
+include graph.org
+include quiz.directory
+include signal.art
+include signal.me
+include signal.org
+include t.me
+include tdesktop.com
+include telega.one
+include telegra.ph
+include telegram-cdn.org
+include telegram.dog
+include telegram.me
+include telegram.org
+include telegram.space
+include telesco.pe
+include tg.dev
+include ton.org
+include toncenter.com
+include tx.me
+include usercontent.dev
+include viber.com
+include wa.me
+include whatsapp.cc
+include whatsapp.com
+include whatsapp.info
+include whatsapp.net
+include whatsapp.org
+include whatsapp.tv
+include whatsappbrand.com
+include whispersystems.org
+include wl.co
+exit
+dns-proxy route object-group rr_group_messengers_1 Wireguard0 auto
+ip route 5.28.192.0 255.255.192.0 Wireguard0 auto
+ip route 5.200.14.128 255.255.255.128 Wireguard0 auto
+ip route 31.13.24.0 255.255.248.0 Wireguard0 auto
+ip route 31.13.64.0 255.255.192.0 Wireguard0 auto
+ip route 34.0.0.0 255.252.0.0 Wireguard0 auto
+ip route 35.192.0.0 255.224.0.0 Wireguard0 auto
+ip route 45.64.40.0 255.255.252.0 Wireguard0 auto
+ip route 57.141.0.0 255.255.255.0 Wireguard0 auto
+ip route 57.141.2.0 255.255.254.0 Wireguard0 auto
+ip route 57.141.4.0 255.255.254.0 Wireguard0 auto
+ip route 57.141.6.0 255.255.255.0 Wireguard0 auto
+ip route 57.141.8.0 255.255.255.0 Wireguard0 auto
+ip route 57.141.10.0 255.255.255.0 Wireguard0 auto
+ip route 57.141.12.0 255.255.254.0 Wireguard0 auto
+ip route 57.141.14.0 255.255.255.0 Wireguard0 auto
+ip route 57.141.16.0 255.255.252.0 Wireguard0 auto
+ip route 57.141.20.0 255.255.255.0 Wireguard0 auto
+ip route 57.141.22.0 255.255.255.0 Wireguard0 auto
+ip route 57.141.24.0 255.255.255.0 Wireguard0 auto
+ip route 57.144.0.0 255.252.0.0 Wireguard0 auto
+ip route 66.22.192.0 255.255.192.0 Wireguard0 auto
+ip route 66.220.144.0 255.255.240.0 Wireguard0 auto
+ip route 69.63.176.0 255.255.240.0 Wireguard0 auto
+ip route 69.171.224.0 255.255.224.0 Wireguard0 auto
+ip route 74.119.76.0 255.255.252.0 Wireguard0 auto
+ip route 91.105.192.0 255.255.254.0 Wireguard0 auto
+ip route 91.108.4.0 255.255.252.0 Wireguard0 auto
+ip route 91.108.8.0 255.255.248.0 Wireguard0 auto
+ip route 91.108.16.0 255.255.248.0 Wireguard0 auto
+ip route 91.108.56.0 255.255.252.0 Wireguard0 auto
+ip route 95.161.64.0 255.255.240.0 Wireguard0 auto
+ip route 102.132.96.0 255.255.240.0 Wireguard0 auto
+ip route 103.4.96.0 255.255.252.0 Wireguard0 auto
+ip route 104.16.0.0 255.240.0.0 Wireguard0 auto
+ip route 129.134.0.0 255.255.128.0 Wireguard0 auto
+ip route 138.128.136.0 255.255.248.0 Wireguard0 auto
+ip route 149.154.160.0 255.255.240.0 Wireguard0 auto
+ip route 157.240.0.0 255.255.128.0 Wireguard0 auto
+ip route 157.240.192.0 255.255.192.0 Wireguard0 auto
+ip route 162.158.0.0 255.254.0.0 Wireguard0 auto
+ip route 163.70.128.0 255.255.128.0 Wireguard0 auto
+ip route 163.77.132.0 255.255.254.0 Wireguard0 auto
+ip route 163.77.136.0 255.255.254.0 Wireguard0 auto
+ip route 163.77.160.0 255.255.240.0 Wireguard0 auto
+ip route 172.64.0.0 255.248.0.0 Wireguard0 auto
+ip route 173.252.64.0 255.255.192.0 Wireguard0 auto
+ip route 179.60.192.0 255.255.252.0 Wireguard0 auto
+ip route 185.60.216.0 255.255.252.0 Wireguard0 auto
+ip route 185.76.151.0 255.255.255.0 Wireguard0 auto
+ip route 185.89.216.0 255.255.252.0 Wireguard0 auto
+ip route 194.221.0.0 255.255.0.0 Wireguard0 auto
+ip route 204.15.20.0 255.255.252.0 Wireguard0 auto
+system configuration save

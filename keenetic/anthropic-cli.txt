@@ -1,0 +1,30 @@
+object-group fqdn rr_anthropic_1
+include ant.dev
+include anthropic.com
+include anthropic.team
+include antspace.dev
+include challenges.cloudflare.com
+include chatbotclaude.com
+include clau.de
+include claude.ai
+include claude.app
+include claude.com
+include claude.dev
+include claude.new
+include claude.site
+include claudeacademy.com
+include claudemcpclient.com
+include claudemcpcontent.com
+include claudepages.dev
+include claudestudio.com
+include claudeusercontent.com
+include http-intake.logs.us5.datadoghq.com
+include modelcontextprotocol.io
+include o1158394.ingest.us.sentry.io
+include servd-anthropic-website.b-cdn.net
+include statsig.com
+include statsigapi.net
+exit
+dns-proxy route object-group rr_anthropic_1 Wireguard0 auto
+ip route 160.79.104.0 255.255.248.0 Wireguard0 auto
+system configuration save

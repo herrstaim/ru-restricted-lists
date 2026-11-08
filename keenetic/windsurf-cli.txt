@@ -1,0 +1,6 @@
+object-group fqdn rr_windsurf_1
+include codeium.com
+include windsurf.com
+exit
+dns-proxy route object-group rr_windsurf_1 Wireguard0 auto
+system configuration save

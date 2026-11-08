@@ -1,0 +1,6 @@
+object-group fqdn rr_vercel_v0_1
+include v0.app
+include v0.dev
+exit
+dns-proxy route object-group rr_vercel_v0_1 Wireguard0 auto
+system configuration save

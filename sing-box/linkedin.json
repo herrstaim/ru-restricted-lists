@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "rules": [
+    {
+      "domain_suffix": [
+        "licdn.com",
+        "linkedin.com",
+        "lnkd.in"
+      ]
+    }
+  ]
+}

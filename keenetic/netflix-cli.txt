@@ -1,0 +1,7 @@
+object-group fqdn rr_netflix_1
+include netflix.com
+include nflximg.net
+include nflxvideo.net
+exit
+dns-proxy route object-group rr_netflix_1 Wireguard0 auto
+system configuration save

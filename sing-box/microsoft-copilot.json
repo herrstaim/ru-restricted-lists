@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "rules": [
+    {
+      "domain_suffix": [
+        "copilot.cloud.microsoft",
+        "copilot.microsoft.com",
+        "edgeservices.bing.com",
+        "sydney.bing.com"
+      ]
+    }
+  ]
+}

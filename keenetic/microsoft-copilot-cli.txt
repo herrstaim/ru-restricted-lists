@@ -1,0 +1,8 @@
+object-group fqdn rr_microsoft_copilot_1
+include copilot.cloud.microsoft
+include copilot.microsoft.com
+include edgeservices.bing.com
+include sydney.bing.com
+exit
+dns-proxy route object-group rr_microsoft_copilot_1 Wireguard0 auto
+system configuration save

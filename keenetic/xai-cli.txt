@@ -1,0 +1,9 @@
+object-group fqdn rr_xai_1
+include grok.com
+include grok.x.com
+include grokbot.com
+include grokipedia.com
+include x.ai
+exit
+dns-proxy route object-group rr_xai_1 Wireguard0 auto
+system configuration save
